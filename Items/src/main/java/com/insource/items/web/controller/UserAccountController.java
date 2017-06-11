@@ -5,22 +5,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-/**
- * 
- * @author inSource Technologies
- *
- */
 @Controller
-public class HomeController {
+public class UserAccountController {
 
 	/**
-	 * Loads Home Page
+	 * Loads Login Page
 	 * 
-	 * @return ModelAndView home.jsp
+	 * @return ModelAndView login.jsp
 	 */
-	@RequestMapping(value = "/", method = RequestMethod.GET)
+	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public ModelAndView getHomePage() {
-		return new ModelAndView("home");
+		return new ModelAndView("login");
 	}
 
 }
