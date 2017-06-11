@@ -13,11 +13,48 @@
 }
 
 .welcome-text {
-	background: black;
-	color: white;
-	background-size: 10px;
-	border-radius: 25px;
-	background-repeat: no-repeat;
+	color: black;
 	text-align: center;
-	width: 25%;
 }
+
+.welcome-text .h3 {
+	color: black;
+	text-align: center;
+}
+
+.login-fields {
+	color: black;
+	text-align: center;
+}
+
+.rnd-textbox {
+	color: gray;
+	border-color: black;
+	border-bottom-style: solid;
+	border-radius: 5%;
+	height: 20px;
+	width: 250px;
+	padding: 10px;
+	display: inline-block;
+	margin: 10px;
+	direction: ltr;
+	text-align: center;
+}	
+
+.rnd-button {
+	color: white;
+	border-color: black;
+	border-bottom-style: solid;
+	border-radius: 5%;
+	height: 20px;
+	width: 250px;
+	padding: 20px;
+	display: inline-block;
+	margin: 10px;
+	direction: ltr;
+	text-align: center;
+	background: black;
+	text-shadow: black;
+	font-size: 15px;	
+}
+
