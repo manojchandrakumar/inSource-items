@@ -3,7 +3,13 @@
 @IMPORT url("template.css");
 
 body {
-	background: linear-gradient(45deg, #bb1881, #f88b50);
-  	font-family: sans-serif;
-	
+	font-size: 15px;
+	font-family: Calibri;
+	direction: center;
 }
+.welcome-text {
+	color: black;
+	text-align: center;
+}
+
+

@@ -9,10 +9,10 @@
 <title>ITEMS | Expense Management System</title>
 </head>
 <body>
-	<div class="login-container">
+<div class="login-container">
 		<h1 class="welcome-text">
 			Welcome to ITEMS ! <Span>
-				<h5>Sign in to your account</h5>
+				<h5>Log in to your account</h5>
 			</Span>
 			<div class="login-fields">
 				<input class="rnd-textbox" type="text" id="login-email"
@@ -27,6 +27,11 @@
 			<h6>Don't have an account ? <a href="register"> Register</a> now </h6>
 			</div>
 		</h1>
+			</div>
+				<div class="login-content">
+	Login Images
 	</div>
+		
+			
 </body>
 </html>
