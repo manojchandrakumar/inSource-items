@@ -13,9 +13,6 @@
 	<!-- Base package for checking the annotated classes -->
 	<context:component-scan base-package="com.insource.items.web.controller"></context:component-scan>
 
-<!--  	<mvc:resources mapping="/resources/**" location="/resources/"></mvc:resources>
-	<mvc:default-servlet-handler />
- -->
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix">
@@ -56,5 +53,4 @@
 			</list>
 		</property>
 	</bean>
-
 </beans>

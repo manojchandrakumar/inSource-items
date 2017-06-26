@@ -20,10 +20,11 @@
 					
 			<input class="rnd-textbox"
 					type="text" id="login-password" placeholder="Password" />
-			<br /><br />
+					<br/>
+			<h6><input class="sub-text" type="checkbox" id="login-remember"> Remember me</h6>
 			<input class="rnd-button" type="submit" id="login-submit" value="Log in" />
 						
-			<h6>Don't have an account ? <a href="#"> Register</a> now </h6>
+			<h6>Don't have an account ? <a href="register"> Register</a> now </h6>
 			</div>
 		</h1>
 	</div>

@@ -1,9 +1,12 @@
 @CHARSET "ISO-8859-1";
 
+
 body {
 	margin: 0;
 	padding: 0;
 	font-size: 15px;
+	background: linear-gradient(45deg, #bb1881, #f88b50);
+  	font-family: sans-serif;
 }
 
 header {
@@ -107,3 +110,4 @@ footer div {
 	color: white;;
 	text-align: center;
 }
+

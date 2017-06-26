@@ -1,6 +1,6 @@
 @CHARSET "ISO-8859-1";
 
-@IMPORT url("login.css");
+@IMPORT url("template.css");
 /* @IMPORT url("setPageOptions.css"); */
 @CHARSET "ISO-8859-1";
 
@@ -42,7 +42,7 @@
 }	
 
 .rnd-button {
-	color: white;
+	color: White;
 	border-color: black;
 	border-bottom-style: solid;
 	border-radius: 5%;
@@ -53,8 +53,23 @@
 	margin: 10px;
 	direction: ltr;
 	text-align: center;
-	background: black;
+	background: linear-gradient(45deg, #bb1881, #f88b50);
 	text-shadow: black;
-	font-size: 15px;	
+	font-size: 15px;
+		
 }
 
+.sub-text {
+	font: italic;
+	font-family: Calibri;
+	font-size: small;
+}
+
+.mandatory {
+	font-size: x-small;
+	color: red;
+}
+
+.fieldset {
+	width: 50%;
+}
