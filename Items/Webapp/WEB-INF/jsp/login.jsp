@@ -16,7 +16,7 @@
 			</Span>
 			<div class="login-fields">
 				<input class="rnd-textbox" type="text" id="login-email"
-					placeholder="Username"> </input> 
+					placeholder="Email"> </input> 
 					
 			<input class="rnd-textbox"
 					type="text" id="login-password" placeholder="Password" />
@@ -28,10 +28,5 @@
 			</div>
 		</h1>
 			</div>
-				<div class="login-content">
-	Login Images
-	</div>
-		
-			
 </body>
 </html>
