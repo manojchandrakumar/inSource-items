@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<meta name="description" content="ITEMS - inSource Technologies' Expense Management System">
+	<meta name="keywords" content="expense, expense management, finance, expense tracker">
+	<meta name="author" content="inSource Technologies Pvt Ltd.,">
+
+	<title>ITEMS | Sign In Or Register</title>
+
+	<link rel="stylesheet" href="./css/style.css">
+
+	<script src="./js/script.js"></script>
+</head>
+
+<body>
+	<header>
+		<div class="container">
+			<div id="branding">
+				<h1><span class="highlight">inSource</span> ITEMS</h1>  
+			</div>
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li  class="current"><a href="account.html">Account</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<section id="account-section">
+		<div class="container">
+			<div class="register-container">
+				<h1> Create your account </h1>
+				<form action="register" method="post">
+					<input type="email" id="email" name="email" required="true" placeholder="e-Mail">
+					<br>
+					<input type="text" id="password" name="password" required="true" placeholder="Password">
+					<br>
+					<input type="text" id="retype-password" name="retype-password" required="true" placeholder="Re-type Password">
+					<br>
+					<input type="text" id="name" name="name" required="true" placeholder="Full Name">
+					<br>
+					<input type="date" id="dob" name="dob" required="false" placeholder="Date of Birth">
+					<br>
+					<button type="submit" class="button_1" id="register" name="register">Register</button>
+					<button type="reset" class="button_2" id="cancel" name="cancel">Cancel</button>
+				</form>
+				<br>					
+				<label name="register-link">Already have an account?
+					<a class="link" href="account.html">Login</button></a>
+					<br>
+				</label>
+
+			</div>
+
+		</div>
+	</section>
+
+	<section id="newsletter">
+		<div class="container">
+			<h1>Subscribe to our newsletter</h1>
+			<form>
+			<input type="email" placeholder="e-Mail"/>
+				<button type="submit" class="button_1">Subscribe</button>
+			</form>
+		</div>
+	</section>
+
+	<section id="boxes">
+		<div class="container">
+			<div class="box">
+				<img src="./img/logo_html.png"> 
+				<h3>HTML5 Markup</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			</div>
+
+			<div class="box">
+				<img src="./img/logo_css.png"> 
+				<h3>CSS3 Design</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			</div>
+
+			<div class="box">
+				<img src="./img/logo_brush.jpg"> 
+				<h3>Graphic Design</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			</div>
+		</div>
+	</section>
+
+	<footer>
+		<p>inSource Technologies Pvt Ltd., Copyright &copy; 2017</p>
+	</footer>
+</body>
+
+</html>
