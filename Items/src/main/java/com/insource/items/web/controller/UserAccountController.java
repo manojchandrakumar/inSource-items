@@ -15,9 +15,9 @@ public class UserAccountController {
 	 * @return ModelAndView login.jsp
 	 */
 
-	@RequestMapping(value = "/login", method = RequestMethod.GET)
-	public ModelAndView getHomePage() {
-		return new ModelAndView("login");
+	@RequestMapping(value="/account", method=RequestMethod.GET)
+	public ModelAndView getAccountPage() {
+		return new ModelAndView("account");
 	}
 
 	@RequestMapping(value = "/register", method = RequestMethod.GET)

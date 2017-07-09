@@ -53,6 +53,16 @@ label{
 	font-size: 16px;
 	text-shadow: currentColor;
 }
+
+.dark {
+	padding: 15px;
+	background: #35424a;
+	color: #ffffff;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border-radius: 5px;
+}
+
 input[type="email"], input[type="text"], input[type="date"] {
 	padding: 4px;
 	margin: 1%;
@@ -209,4 +219,19 @@ footer {
 	margin-top: 0;
 	width: 40%;
 	float: left;
+}	
+
+/* Sidebar */
+
+aside#sidebar{
+	float: right;
+	width: 30%;
+	margin-top: 10px;
+}
+
+/*Main-col */
+
+article#main-col {
+	float: left;
+	width: 65%;
 }
