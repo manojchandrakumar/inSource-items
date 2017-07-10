@@ -1,4 +1,4 @@
-package com.insource.items.model;
+package com.insource.items.person.model;
 
 public class ItemsResponseVO {
 

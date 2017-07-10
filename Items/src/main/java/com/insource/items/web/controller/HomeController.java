@@ -22,5 +22,5 @@ public class HomeController {
 	public ModelAndView getHomePage() {
 		return new ModelAndView("home");
 	}
-
+	
 }

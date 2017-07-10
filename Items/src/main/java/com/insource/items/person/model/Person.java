@@ -1,4 +1,4 @@
-package com.insource.items.model;
+package com.insource.items.person.model;
 
 import java.lang.reflect.Field;
 import java.util.Date;
