@@ -76,9 +76,9 @@ public class PersonDAOImpl extends AbstractDOAImpl implements PersonDAO {
 			ps.setString(2, person.getPassword());
 			ps.setString(3, person.getName());
 			ps.setString(4, person.getPhone());
-			ps.setDate(5, (Date) person.getDob());
-			ps.setDate(6, (Date) person.getCreatedDate());
-			ps.setDate(7, (Date) person.getLastLoginDate());
+			ps.setDate(5, new Date(person.getDob().getTime()));
+			ps.setDate(6, new Date(person.getCreatedDate().getTime()));
+			ps.setDate(7, new Date(person.getLastLoginDate().getTime()));
 			status = ps.execute();
 
 			if (status) {
