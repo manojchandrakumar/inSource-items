@@ -26,6 +26,7 @@
           <li class="current"><a href="home">Home</a></li>
           <li><a href="about">About</a></li>
           <li><a href="account">Account</a></li>
+          <li><a href="getUserDetails">Test</a></li>
         </ul>
       </nav>
     </div>
@@ -41,8 +42,8 @@
   <section id="newsletter">
     <div class="container">
       <h1>Subscribe to our newsletter</h1>
-      <form>
-        <input type="email" placeholder="Enter email."/>
+      <form action="getUserDetails" method="POST">
+        <input name="email" type="email" placeholder="Enter email."/>
         <button type="submit" class="button_1">Subscribe</button>
       </form>
     </div>

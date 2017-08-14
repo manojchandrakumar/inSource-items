@@ -23,4 +23,24 @@ public class HomeController {
 		return new ModelAndView("home");
 	}
 	
+	/**
+	 * Loads Login Page
+	 * 
+	 * @return ModelAndView home.jsp
+	 */
+	@RequestMapping(value = "/account", method = RequestMethod.GET)
+	public ModelAndView getLoginPage() {
+		return new ModelAndView("account");
+	}
+	
+	/**
+	 * Loads Registration Page
+	 * 
+	 * @return ModelAndView home.jsp
+	 */
+	@RequestMapping(value = "/register", method = RequestMethod.GET)
+	public ModelAndView getRegistrationPage() {
+		return new ModelAndView("register");
+	}
+	
 }

@@ -5,42 +5,28 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "person")
+@Table(name = "prsn")
 public class Person {
 
 	@Id
-	@GeneratedValue
-	@Column(name = "prsn_id", length = 11)
-	private Long id;
-
-	@Column(name = "prsn_email")
+	@Column(name = "email")
 	private String email;
+	
+	@Column(name="password")
+	private String password;
 
-	@Column(name = "prsn_first_name")
-	private String firstName;
+	@Column(name = "name")
+	private String name;
 
-	@Column(name = "prsn_last_name")
-	private String lastName;
-
-	@Column(name = "address")
-	private String address;
-
-	@Column(name = "city")
-	private String city;
-
-	@Column(name = "state")
-	private String state;
-
-	@Column(name = "country")
-	private String country;
-
-	@Column(name = "prsn_phone")
+	@Column(name = "phone")
 	private String phone;
+
+	@Column(name = "dob")
+	private Date dob;
 
 	@Column(name = "created_date")
 	private Date createdDate;
@@ -48,13 +34,7 @@ public class Person {
 	@Column(name = "last_login_date")
 	private Date lastLoginDate;
 
-	public Long getId() {
-		return id;
-	}
 
-	public void setId(Long id) {
-		this.id = id;
-	}
 
 	public String getEmail() {
 		return email;
@@ -64,52 +44,20 @@ public class Person {
 		this.email = email;
 	}
 
-	public String getFirstName() {
-		return firstName;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
-	public String getLastName() {
-		return lastName;
+	public String getName() {
+		return name;
 	}
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
-	public String getAddress() {
-		return address;
-	}
-
-	public void setAddress(String address) {
-		this.address = address;
-	}
-
-	public String getCity() {
-		return city;
-	}
-
-	public void setCity(String city) {
-		this.city = city;
-	}
-
-	public String getState() {
-		return state;
-	}
-
-	public void setState(String state) {
-		this.state = state;
-	}
-
-	public String getCountry() {
-		return country;
-	}
-
-	public void setCountry(String country) {
-		this.country = country;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public String getPhone() {
@@ -118,6 +66,14 @@ public class Person {
 
 	public void setPhone(String phone) {
 		this.phone = phone;
+	}
+
+	public Date getDob() {
+		return dob;
+	}
+
+	public void setDob(Date dob) {
+		this.dob = dob;
 	}
 
 	public Date getCreatedDate() {

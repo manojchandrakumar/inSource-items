@@ -4,6 +4,7 @@ public class ItemsResponseVO {
 
 	private boolean status;
 	private String serviceMessage;
+	private Object resultObject;
 
 	public boolean isStatus() {
 		return status;
@@ -21,4 +22,12 @@ public class ItemsResponseVO {
 		this.serviceMessage = serviceMessage;
 	}
 
-}
+	public Object getResultObject() {
+		return resultObject;
+	}
+
+	public void setResultObject(Object resultObject) {
+		this.resultObject = resultObject;
+	}
+
+	}

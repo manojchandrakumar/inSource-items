@@ -1,74 +1,53 @@
 package com.insource.items.web.controller;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.insource.items.person.model.ItemsResponseVO;
 import com.insource.items.person.model.Person;
+import com.insource.items.person.model.PersonRequestVO;
 import com.insource.items.person.service.PersonService;
 
 @Controller
 public class PersonController {
 
+	@Autowired
 	private PersonService personService;
 
-	@RequestMapping(value="/account", method=RequestMethod.GET)
-	public ModelAndView getAccountPage() {
-		return new ModelAndView("account");
+	public PersonService getPersonService() {
+		return personService;
 	}
 
-	@RequestMapping(value = "/register", method = RequestMethod.GET)
-	public ModelAndView getRegisterPage() {
-		return new ModelAndView("register");
+	public void setPersonService(PersonService personService) {
+		this.personService = personService;
 	}
+
 	
-	@Autowired(required=true)
-	@Qualifier(value="personService")
-	public void setPersonService(PersonService ps){
-		this.personService = ps;
-	}
-	
-	@RequestMapping(value = "/persons", method = RequestMethod.GET)
-	public String listPersons(Model model) {
-		model.addAttribute("person", new Person());
-		model.addAttribute("listPersons", this.personService.listPersons());
-		return "person";
-	}
-	
-	//For add and update person both
-	@RequestMapping(value= "/person/add", method = RequestMethod.POST)
-	public String addPerson(@ModelAttribute("person") Person p){
-		
-		if(p.getId() == 0){
-			//new person, add it
-			this.personService.addPerson(p);
-		}else{
-			//existing person, call update
-			this.personService.updatePerson(p);
+	@RequestMapping(name = "/createUser", method = RequestMethod.POST, produces="application/json")
+	public @ResponseBody ItemsResponseVO addPerson(HttpServletRequest request) {
+		boolean status = false;
+		ItemsResponseVO responseVO = new ItemsResponseVO();
+		if (request != null) {
+			status = personService.addPerson(null, request);
+			responseVO.setStatus(status);
+			responseVO.setServiceMessage("User Account Created Successfully");
+		} else {
+			responseVO.setStatus(false);
+			responseVO.setServiceMessage("No Request Header");
 		}
-		
-		return "redirect:/persons";
-		
+		return responseVO;
 	}
-	
-	@RequestMapping("/remove/{id}")
-    public String removePerson(@PathVariable("id") int id){
-		
-        this.personService.removePerson(id);
-        return "redirect:/persons";
-    }
- 
-    @RequestMapping("/edit/{id}")
-    public String editPerson(@PathVariable("id") int id, Model model){
-        model.addAttribute("person", this.personService.getPersonById(id));
-        model.addAttribute("listPersons", this.personService.listPersons());
-        return "person";
-    }
-	
+	@RequestMapping(name="/getUserDetails", method=RequestMethod.POST, produces="application/json")
+	public @ResponseBody ItemsResponseVO getUserDetails(HttpServletRequest request) {
+		ItemsResponseVO responseVO = new ItemsResponseVO();
+		Person p = personService.getPerson(request.getParameter("email"));
+		responseVO.setResultObject(p);
+		return responseVO;
+	}
 }

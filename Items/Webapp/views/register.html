@@ -35,7 +35,7 @@
 		<div class="container">
 			<div class="register-container">
 				<h1> Create your account </h1>
-				<form action="register" method="post">
+				<form action="createUser" method="post">
 					<input type="email" id="email" name="email" required="true" placeholder="e-Mail">
 					<br>
 					<input type="text" id="password" name="password" required="true" placeholder="Password">
@@ -46,12 +46,14 @@
 					<br>
 					<input type="date" id="dob" name="dob" required="false" placeholder="Date of Birth">
 					<br>
+                    <input type="text" id="phone" name="phone" required="true" placeholder="Mobile Number">
+                    <br>
 					<button type="submit" class="button_1" id="register" name="register">Register</button>
 					<button type="reset" class="button_2" id="cancel" name="cancel">Cancel</button>
 				</form>
 				<br>					
 				<label name="register-link">Already have an account?
-					<a class="link" href="account.html">Login</button></a>
+					<a class="link" href="account">Login</button></a>
 					<br>
 				</label>
 
